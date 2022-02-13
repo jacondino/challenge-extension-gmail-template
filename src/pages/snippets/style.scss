@@ -1,0 +1,15 @@
+.snippets {
+  &__buttons {
+    .button {
+      font-size: 16px;
+
+      &:first-child {
+        margin-bottom: 15px;
+      }
+    }
+    .icon {
+      padding-right: 20px;
+      color: #7f7d7d;
+    }
+  }
+}

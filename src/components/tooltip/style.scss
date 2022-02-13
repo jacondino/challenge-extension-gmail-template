@@ -1,0 +1,23 @@
+$color-text-grey: #4d4d4d;
+$color-shadow-grey: $color-text-grey;
+$color-header-grey: #c1c1c1;
+
+.tooltip {
+  width: 300px;
+
+  &__header {
+    color: $color-header-grey;
+    padding: 15px;
+  }
+
+  &__body {
+    padding: 0 15px;
+  }
+
+  &__footer {
+    color: $color-text-grey;
+    background-color: #fafafa;
+    padding: 10px 15px;
+    border-top: 1px solid #e5e5e5;
+  }
+}

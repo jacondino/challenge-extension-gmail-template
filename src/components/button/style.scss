@@ -1,0 +1,8 @@
+.button {
+  display: flex;
+
+  &__transparent {
+    background: none;
+    border: 0;
+  }
+}
