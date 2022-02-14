@@ -1,5 +1,17 @@
-import { Snippets } from "./pages";
+import { Snippets, Templates } from './pages';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 export const App = () => <Snippets />;
 
-export default App;
+// export const App = () => {
+//   return (
+//     <Router>
+//       <Routes>
+//         <Route path="/" element={<Snippets />} />
+//         <Route path="/templates" element={<Templates />} />
+//       </Routes>
+//     </Router>
+//   );
+// };
+
+// export default App;

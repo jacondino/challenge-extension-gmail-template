@@ -1,1 +1,2 @@
-export { Snippets } from "./snippets";
+export { Snippets } from './snippets';
+export { Templates } from './templates';

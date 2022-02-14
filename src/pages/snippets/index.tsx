@@ -1,5 +1,5 @@
-import { Tooltip, Button, PlusIcon, GearIcon } from "../../components/";
-import "./style.scss";
+import { Tooltip, Button, PlusIcon, GearIcon } from '../../components/';
+import './style.scss';
 
 export const Snippets = () => {
   const Buttons = () => {
@@ -17,11 +17,11 @@ export const Snippets = () => {
 
   const renderSnippets = () => {
     return (
-      <>
-        <div>
-          <span>teste 1</span>
-        </div>
-      </>
+      <iframe
+        title="Templates"
+        id="iframeTemplates"
+        src="http://localhost:3000/templates"
+      />
     );
   };
 

@@ -1,0 +1,19 @@
+{
+  "templates": [
+    {
+      "id": 1,
+      "subject": "subject 1",
+      "message": "message 1"
+    },
+    {
+      "id": 2,
+      "subject": "subject 2",
+      "message": "message 2"
+    },
+    {
+      "id": 3,
+      "subject": "subject 3",
+      "message": "message 3"
+    }
+  ]
+}
