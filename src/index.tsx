@@ -21,10 +21,8 @@ InboxSDK.load('1.0', 'INBOX_SDK_APP_ID').then(function (sdk) {
       'message',
       function (event) {
         if (event.data.key === 'setTemplate') {
-          this.setTimeout(() => {
-            composeView.setSubject(event.data.value.subject);
-            composeView.setBodyText(event.data.value.message);
-          }, 1000);
+          composeView.setSubject(event.data.value.subject);
+          composeView.setBodyText(event.data.value.message);
         }
       },
       false
