@@ -1,16 +1,22 @@
 import { useEffect, useState } from 'react';
-import { Button } from '../../components/';
+import { Button } from '../../components';
 import objectTemplate from '../../data/templates.json';
 import './style.scss';
 
+type Template = {
+  id: number;
+  subject: string;
+  message: string;
+};
+
 export const Templates = () => {
-  const [template, setTemplates] = useState([]);
+  const [template, setTemplates] = useState<Template[]>([]);
 
   useEffect(() => {
-    setTemplates(objectTemplate.templates);
+    setTemplates(objectTemplate?.templates);
   }, []);
 
-  const setTemplate = (item) => {
+  const setTemplate = (item: Template) => {
     window.parent.postMessage(
       {
         key: 'setTemplate',
