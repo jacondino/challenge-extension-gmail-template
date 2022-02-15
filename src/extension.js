@@ -37,7 +37,7 @@ window.InboxSDK.load(1, 'INBOX_SDK_APP_ID').then(function (sdk) {
 
         ReactDOM.render(
           <React.StrictMode>
-            <Snippets sdk={sdk} />
+            <Snippets />
           </React.StrictMode>,
           container
         );
