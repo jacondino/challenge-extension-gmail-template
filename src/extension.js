@@ -10,7 +10,7 @@ window.InboxSDK.loadScript(
   'https://unpkg.com/react-dom@17/umd/react-dom.development.js'
 );
 
-window.InboxSDK.load('1.0', 'INBOX_SDK_APP_ID').then(function (sdk) {
+window.InboxSDK.load(1, 'INBOX_SDK_APP_ID').then(function (sdk) {
   sdk.Compose.registerComposeViewHandler(function (composeView) {
     window.addEventListener(
       'message',
@@ -37,7 +37,7 @@ window.InboxSDK.load('1.0', 'INBOX_SDK_APP_ID').then(function (sdk) {
 
         ReactDOM.render(
           <React.StrictMode>
-            <Snippets />
+            <Snippets sdk={sdk} />
           </React.StrictMode>,
           container
         );

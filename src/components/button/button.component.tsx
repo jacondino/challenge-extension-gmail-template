@@ -7,6 +7,7 @@ interface ButtonProps {
   children: string | ReactNode;
   icon?: ReactNode;
   transparent?: boolean;
+  className?: string;
 }
 
 export const Button = ({
@@ -15,10 +16,13 @@ export const Button = ({
   disabled,
   icon,
   transparent,
+  className,
 }: ButtonProps) => {
   return (
     <button
-      className={`button ${transparent ? 'button__transparent' : ''}`}
+      className={`button ${className ? className : ''} ${
+        transparent ? 'button__transparent' : ''
+      }`}
       onClick={onClick}
       disabled={disabled}
     >
