@@ -10,6 +10,7 @@ interface FormProps {
 export const Form = ({ handleSubmit, onClose }: FormProps) => {
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
+  const [error, setError] = useState(false);
 
   const handleSubject = (event: any) => {
     setSubject(event.target.value);
@@ -27,16 +28,23 @@ export const Form = ({ handleSubmit, onClose }: FormProps) => {
   const onCloseButton = () => {
     onClean();
     onClose();
+    setError(false);
   };
 
   const onSave = () => {
-    handleSubmit(subject, message);
-    onClean();
-    onClose();
+    if (subject && message) {
+      handleSubmit(subject, message);
+      onClean();
+      onClose();
+      setError(false);
+    } else {
+      setError(true);
+    }
   };
 
   return (
     <div className="form">
+      {error && <span className="error">all required fields</span>}
       <input
         placeholder="subject"
         type="subject"
@@ -44,7 +52,7 @@ export const Form = ({ handleSubmit, onClose }: FormProps) => {
         onChange={handleSubject}
       />
       <textarea
-        rows={4}
+        rows={3}
         placeholder="message"
         value={message}
         onChange={handleMessage}

@@ -7,7 +7,7 @@
     margin-bottom: 5px;
     border: 1px solid #d7d7d7;
     border-radius: 3px;
-    padding: 5px;
+    padding: 4px;
 
     &:focus-visible {
       outline: none;
@@ -36,5 +36,16 @@
     .save {
       background: #03931b;
     }
+  }
+
+  .error {
+    font-size: 12px;
+    border-radius: 4px;
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    width: 97%;
+    padding: 3px 0 0 8px;
+    margin-bottom: 2px;
   }
 }
