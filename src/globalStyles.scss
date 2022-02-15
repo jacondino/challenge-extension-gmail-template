@@ -1,3 +1,23 @@
+$primary: #b4b4b4;
+
 body {
   font-family: roboto;
+
+  scrollbar-color: $primary lighten($primary, 65);
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: $primary;
+  }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    width: 10px;
+    height: 235px;
+    background-color: lighten($primary, 65);
+  }
 }
